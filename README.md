@@ -1,2 +1,0 @@
-# CVTailor
-Created with CodeSandbox
