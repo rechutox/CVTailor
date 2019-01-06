@@ -1,0 +1,59 @@
+@import "./variables";
+
+.side_block {
+  margin-top: $default_padding;
+
+  a {
+    text-decoration: none;
+    color: $contrast_color;
+  }
+
+  .header {
+    font-family: $title_font;
+    border-bottom: 2px solid $contrast_color;
+    font-size: 18pt;
+    line-height: 2;
+  }
+
+  .content {
+    margin-top: $default_padding;
+
+    .item-icon-text {
+      display: flex;
+      align-items: top;
+      margin-top: $default_padding * 0.5;
+      .icon {
+        width: 40px;
+        font-size: 26px;
+        line-height: 1;
+        text-align: center;
+        margin-right: $default_padding * 0.5;
+      }
+    }
+
+    .item-rating {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: $default_padding * 0.5;
+    }
+
+    .item-columns {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: $default_padding * 0.5;
+      .cell {
+        flex: 0 1 33.333%;
+        line-height: 2;
+      }
+    }
+  }
+  @media print {
+    a {
+      color: black;
+    }
+    .header {
+      border-color: black;
+    }
+  }
+}

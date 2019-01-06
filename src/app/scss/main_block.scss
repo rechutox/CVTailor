@@ -1,0 +1,135 @@
+@import "./variables";
+@import "./variables";
+
+.main_block {
+  margin-top: $default_padding;
+
+  .header {
+    position: relative;
+    font-family: $title_font;
+    border-bottom: 2px solid $principal_color;
+    color: $principal_color;
+    font-size: 18pt;
+    line-height: 2;
+    margin-left: 60px;
+    .icon {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -60px;
+      width: 48px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid $principal_color;
+      border-radius: 50%;
+      background-color: white;
+      z-index: 100; // I feel dirty....
+    }
+  }
+
+  .content {
+    margin-top: $default_padding;
+    margin-left: 60px;
+  }
+
+  .main-text {
+    position: relative;
+    // The dot
+    &::after {
+      box-sizing: border-box;
+      display: block;
+      position: absolute;
+      content: "";
+      top: 0;
+      left: -45px;
+      width: 20px;
+      height: 20px;
+      border: 2px solid $principal_color;
+      background-color: white;
+      border-radius: 50%;
+    }
+    // The line
+    &::before {
+      box-sizing: border-box;
+      display: block;
+      position: absolute;
+      content: "";
+      top: -25px;
+      height: 30px;
+      left: -36px;
+      width: 2px;
+      background-color: $principal_color;
+    }
+  }
+
+  .item-timeline {
+    position: relative;
+    margin-top: $default_padding;
+
+    .title {
+      font-weight: 600;
+    }
+    .subtitle {
+      font-weight: 400;
+      font-style: italic;
+      margin-top: $default_padding * 0.3;
+    }
+    .date {
+      font-weight: 300;
+      font-style: italic;
+      margin-top: $default_padding * 0.3;
+    }
+    .body {
+      margin-top: $default_padding * 0.3;
+    }
+
+    // The dot
+    &::after {
+      box-sizing: border-box;
+      display: block;
+      position: absolute;
+      content: "";
+      top: 0;
+      left: -45px;
+      width: 20px;
+      height: 20px;
+      border: 2px solid $principal_color;
+      background-color: white;
+      border-radius: 50%;
+    }
+    // The line
+    &::before {
+      box-sizing: border-box;
+      display: block;
+      position: absolute;
+      content: "";
+      top: -25px;
+      bottom: 0;
+      left: -36px;
+      width: 2px;
+      background-color: $principal_color;
+    }
+    &:last-child::before {
+      height: 30px;
+      bottom: unset;
+    }
+  }
+
+  @media print {
+    .header {
+      color: black;
+      border-color: black;
+      margin-left: 0;
+      .icon {
+        display: none;
+        border-color: black;
+      }
+    }
+
+    .content {
+      margin-left: 0;
+    }
+  }
+}

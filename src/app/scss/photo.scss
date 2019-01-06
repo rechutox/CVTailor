@@ -1,0 +1,53 @@
+@import "./variables";
+
+.photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: $photo_size;
+    height: $photo_size;
+    margin: 0;
+    border: 2px solid $principal_color;
+    border-radius: 50%;
+  }
+}
+
+.side {
+  .photo {
+    img {
+      border-color: $contrast_color;
+    }
+  }
+}
+
+@media only screen and (min-width: $mobile_breakpoint) {
+  .main {
+    .photo {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile_breakpoint) {
+  .side {
+    .photo {
+      display: none;
+    }
+  }
+}
+
+@media print {
+  .side {
+    .photo {
+      display: none;
+    }
+  }
+  .main {
+    .photo {
+      img {
+        border-color: black;
+      }
+    }
+  }
+}

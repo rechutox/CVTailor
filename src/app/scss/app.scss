@@ -1,0 +1,74 @@
+@import "./variables";
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+.app {
+  display: flex;
+  min-height: 100vh;
+  font-family: "Open Sans", sans-serif;
+}
+
+.side {
+  flex: 1 1;
+  min-width: 390px;
+  padding: $default_padding;
+  color: $contrast_color;
+  background-color: $principal_color;
+}
+
+.main {
+  flex: 1 1 100%;
+  padding: $default_padding;
+  background-color: white;
+
+  .main-header {
+    display: flex;
+    align-items: center;
+    height: $photo_size;
+    font-family: "Source Code Pro", monospace;
+    & > * + * {
+      margin-left: $default_padding;
+    }
+    .title {
+      font-size: 36pt;
+      font-weight: 500;
+    }
+    .subtitle {
+      font-size: 24pt;
+      font-weight: 500;
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile_breakpoint) {
+  .app {
+    flex-direction: column;
+  }
+  .side {
+    margin-top: $default_padding;
+    order: 99;
+  }
+}
+
+@media print {
+  .app {
+    flex-direction: column;
+  }
+  .main {
+    padding-bottom: 0;
+  }
+  .side {
+    margin-top: $default_padding;
+    order: 99;
+    background: white;
+    color: black;
+    padding-top: 0;
+  }
+}
