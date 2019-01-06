@@ -1,10 +1,10 @@
 import React from "react";
 import "./scss/photo.scss";
 
-export default function() {
+export default function({ src, alt }) {
   return (
-    <div class="photo">
-      <img src="https://via.placeholder.com/160" alt="Jesus Veracierta" />
+    <div className="photo">
+      <img src={src} alt={alt} />
     </div>
   );
 }

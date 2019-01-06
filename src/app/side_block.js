@@ -8,7 +8,7 @@ export default function({ type, title, items }) {
   switch (type) {
     case "aside-icon-text":
       content = items.map((data, i) => (
-        <div className="item-icon-text">
+        <div className="item-icon-text" key={i}>
           <Icon icon={data.icon} />
           <div className="body">
             <div className="title">
@@ -25,7 +25,7 @@ export default function({ type, title, items }) {
       break;
     case "aside-rating":
       content = items.map((data, i) => (
-        <div className="item-rating">
+        <div className="item-rating" key={i}>
           <div className="body">
             <div className="title">
               <strong>{data.title}</strong>
@@ -39,7 +39,9 @@ export default function({ type, title, items }) {
       content = (
         <div className="item-columns">
           {items.map((data, i) => (
-            <div className="cell">{data}</div>
+            <div className="cell" key={i}>
+              {data}
+            </div>
           ))}
         </div>
       );

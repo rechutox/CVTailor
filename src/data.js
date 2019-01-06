@@ -1,6 +1,7 @@
 export default {
   aside: {
-    img: "https://via.placeholder.com/300",
+    img: "https://via.placeholder.com/160",
+    alt: "Jesus Veracierta",
     blocks: [
       {
         type: "aside-icon-text",
@@ -149,6 +150,8 @@ export default {
     ],
   },
   main: {
+    img: "https://via.placeholder.com/160",
+    alt: "Jesus Veracierta",
     title: "Jesus Veracierta",
     subtitle: "Informatics Engineer",
     blocks: [

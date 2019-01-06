@@ -10,7 +10,7 @@ export default function({ type, title, icon, body, items }) {
       break;
     case "main-timeline":
       content = items.map((data, i) => (
-        <div className="item-timeline">
+        <div className="item-timeline" key={i}>
           <div className="title">{data.title}</div>
           <div className="subtitle">{data.subtitle}</div>
           <div className="date">{data.year}</div>

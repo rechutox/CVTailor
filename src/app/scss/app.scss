@@ -13,6 +13,7 @@ body {
   display: flex;
   min-height: 100vh;
   font-family: "Open Sans", sans-serif;
+  color: black;
 }
 
 .side {
@@ -33,6 +34,7 @@ body {
     align-items: center;
     height: $photo_size;
     font-family: "Source Code Pro", monospace;
+    color: $principal_color;
     & > * + * {
       margin-left: $default_padding;
     }
@@ -63,6 +65,9 @@ body {
   }
   .main {
     padding-bottom: 0;
+    .main-header {
+      color: black;
+    }
   }
   .side {
     margin-top: $default_padding;

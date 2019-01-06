@@ -9,7 +9,7 @@ export default function({ data }) {
     <div className="app">
       <div className="side">
         <div className="side-header">
-          <Photo />
+          <Photo src={data.aside.img} alt={data.aside.alt} />
         </div>
         <div className="side-content">
           {data.aside.blocks.map((data, i) => (
@@ -20,7 +20,7 @@ export default function({ data }) {
       <div className="main">
         <div className="main-header">
           <div className="left">
-            <Photo />
+            <Photo src={data.main.img} alt={data.main.alt} />
           </div>
           <div className="right">
             <div className="title">Jesus Veracierta</div>
